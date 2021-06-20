@@ -1,31 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\steve\\source\\repos\\GBCrypto\\GloboCrypto\\GloboCrypto.WebAPI\\GloboCrypto.WebAPI.csproj": {}
+    "/Users/stephenkay/Projects/GBCrypto/GloboCrypto/GloboCrypto.WebAPI/GloboCrypto.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\steve\\source\\repos\\GBCrypto\\GloboCrypto\\GloboCrypto.WebAPI\\GloboCrypto.WebAPI.csproj": {
+    "/Users/stephenkay/Projects/GBCrypto/GloboCrypto/GloboCrypto.WebAPI/GloboCrypto.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\steve\\source\\repos\\GBCrypto\\GloboCrypto\\GloboCrypto.WebAPI\\GloboCrypto.WebAPI.csproj",
+        "projectUniqueName": "/Users/stephenkay/Projects/GBCrypto/GloboCrypto/GloboCrypto.WebAPI/GloboCrypto.WebAPI.csproj",
         "projectName": "GloboCrypto.WebAPI",
-        "projectPath": "C:\\Users\\steve\\source\\repos\\GBCrypto\\GloboCrypto\\GloboCrypto.WebAPI\\GloboCrypto.WebAPI.csproj",
-        "packagesPath": "C:\\Users\\steve\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\steve\\source\\repos\\GBCrypto\\GloboCrypto\\GloboCrypto.WebAPI\\obj\\",
+        "projectPath": "/Users/stephenkay/Projects/GBCrypto/GloboCrypto/GloboCrypto.WebAPI/GloboCrypto.WebAPI.csproj",
+        "packagesPath": "/Users/stephenkay/.nuget/packages/",
+        "outputPath": "/Users/stephenkay/Projects/GBCrypto/GloboCrypto/GloboCrypto.WebAPI/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\steve\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/stephenkay/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "/Users/stephenkay/Downloads": {},
+          "https://ci.appveyor.com/nuget/nugetizer3000": {},
+          "https://nuget.devexpress.com/DwfuKOXd4vGL96ummll6Knhz9Rmt3vcja5LEfR12mCyWdmwHfj/api": {},
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net5.0": {
@@ -45,7 +46,7 @@
           "dependencies": {
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.1.4, )"
             }
           },
           "imports": [
@@ -66,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
         }
       }
     }
