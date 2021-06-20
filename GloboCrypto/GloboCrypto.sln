@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.WebAPI", "GloboCrypto.WebAPI\GloboCrypto.WebAPI.csproj", "{502EC527-78A3-410A-A85E-6A1E9A83C784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.Models", "GloboCrypto.Models\GloboCrypto.Models.csproj", "{7CA67173-C80A-444A-82FF-AD1CD6167F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.WebAPI.Services", "GloboCrypto.WebAPI.Services\GloboCrypto.WebAPI.Services.csproj", "{92A8C654-D2F9-4E62-8F29-E1830439C752}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{502EC527-78A3-410A-A85E-6A1E9A83C784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{502EC527-78A3-410A-A85E-6A1E9A83C784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{502EC527-78A3-410A-A85E-6A1E9A83C784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{502EC527-78A3-410A-A85E-6A1E9A83C784}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CA67173-C80A-444A-82FF-AD1CD6167F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CA67173-C80A-444A-82FF-AD1CD6167F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CA67173-C80A-444A-82FF-AD1CD6167F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CA67173-C80A-444A-82FF-AD1CD6167F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A8C654-D2F9-4E62-8F29-E1830439C752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A8C654-D2F9-4E62-8F29-E1830439C752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A8C654-D2F9-4E62-8F29-E1830439C752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A8C654-D2F9-4E62-8F29-E1830439C752}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADB86637-934D-439C-BB1D-C69580D83760}
+	EndGlobalSection
+EndGlobal

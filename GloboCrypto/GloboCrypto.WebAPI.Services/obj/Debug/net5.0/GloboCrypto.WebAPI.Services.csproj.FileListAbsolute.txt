@@ -1,0 +1,12 @@
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\bin\Debug\net5.0\GloboCrypto.WebAPI.Services.deps.json
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\bin\Debug\net5.0\GloboCrypto.WebAPI.Services.dll
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\bin\Debug\net5.0\ref\GloboCrypto.WebAPI.Services.dll
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\bin\Debug\net5.0\GloboCrypto.WebAPI.Services.pdb
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\obj\Debug\net5.0\GloboCrypto.WebAPI.Services.csproj.AssemblyReference.cache
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\obj\Debug\net5.0\GloboCrypto.WebAPI.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\obj\Debug\net5.0\GloboCrypto.WebAPI.Services.AssemblyInfoInputs.cache
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\obj\Debug\net5.0\GloboCrypto.WebAPI.Services.AssemblyInfo.cs
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\obj\Debug\net5.0\GloboCrypto.WebAPI.Services.csproj.CoreCompileInputs.cache
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\obj\Debug\net5.0\GloboCrypto.WebAPI.Services.dll
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\obj\Debug\net5.0\ref\GloboCrypto.WebAPI.Services.dll
+C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.WebAPI.Services\obj\Debug\net5.0\GloboCrypto.WebAPI.Services.pdb
