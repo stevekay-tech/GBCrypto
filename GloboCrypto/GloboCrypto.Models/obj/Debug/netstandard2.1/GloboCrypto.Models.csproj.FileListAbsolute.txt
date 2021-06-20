@@ -1,9 +1,0 @@
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\bin\Debug\netstandard2.1\GloboCrypto.Models.deps.json
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\bin\Debug\netstandard2.1\GloboCrypto.Models.dll
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\bin\Debug\netstandard2.1\GloboCrypto.Models.pdb
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\obj\Debug\netstandard2.1\GloboCrypto.Models.csproj.AssemblyReference.cache
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\obj\Debug\netstandard2.1\GloboCrypto.Models.AssemblyInfoInputs.cache
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\obj\Debug\netstandard2.1\GloboCrypto.Models.AssemblyInfo.cs
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\obj\Debug\netstandard2.1\GloboCrypto.Models.csproj.CoreCompileInputs.cache
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\obj\Debug\netstandard2.1\GloboCrypto.Models.dll
-C:\Users\steve\source\repos\GBCrypto\GloboCrypto\GloboCrypto.Models\obj\Debug\netstandard2.1\GloboCrypto.Models.pdb
