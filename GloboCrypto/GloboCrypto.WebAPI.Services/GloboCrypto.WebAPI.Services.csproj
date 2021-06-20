@@ -8,6 +8,7 @@
     <Folder Include="Authentication\" />
     <Folder Include="Models\" />
     <Folder Include="Notifications\" />
+    <Folder Include="Coins\" />
   </ItemGroup>
 
 </Project>
