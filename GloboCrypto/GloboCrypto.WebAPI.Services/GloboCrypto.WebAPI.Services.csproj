@@ -9,6 +9,10 @@
     <Folder Include="Models\" />
     <Folder Include="Notifications\" />
     <Folder Include="Coins\" />
+    <Folder Include="Events\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="5.0.10" />
+  </ItemGroup>
 </Project>

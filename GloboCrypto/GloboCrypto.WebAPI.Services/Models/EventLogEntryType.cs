@@ -1,10 +1,13 @@
 ﻿using System;
 namespace GloboCrypto.WebAPI.Services.Models
 {
-    public class EventLogEntryType
+    public enum EventLogEntryType
     {
-        public EventLogEntryType()
-        {
-        }
+        Authenticate,
+        Subscription,
+        SubscriptionUpdate,
+        Notification,
+        Information,
+        Error
     }
 }
