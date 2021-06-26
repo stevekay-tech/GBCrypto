@@ -9,7 +9,6 @@
     <Folder Include="Models\" />
     <Folder Include="Notifications\" />
     <Folder Include="Coins\" />
-    <Folder Include="Events\" />
     <Folder Include="Data\" />
   </ItemGroup>
 
