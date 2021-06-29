@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace GloboCrypto.Models.Interfaces
+namespace GloboCrypto.WebAPI.Services.Data
 {
     public interface ILocalDbService
     {

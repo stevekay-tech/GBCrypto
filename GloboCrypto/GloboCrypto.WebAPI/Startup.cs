@@ -1,4 +1,3 @@
-using GloboCrypto.Models.Interfaces;
 using GloboCrypto.WebAPI.Services.Coins;
 using GloboCrypto.WebAPI.Services.Data;
 using GloboCrypto.WebAPI.Services.Events;
