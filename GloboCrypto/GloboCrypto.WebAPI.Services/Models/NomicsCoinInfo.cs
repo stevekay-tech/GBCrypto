@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GloboCrypto.Models.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,15 @@ namespace GloboCrypto.WebAPI.Services.Models
         public string Description { get; set; }
         [JsonPropertyName("logo_url")]
         public string LogoUrl { get; set; }
+        public static explicit operator CoinInfo(NomicsCoinInfo nci)
+        {
+            return new CoinInfo {
+                Id = nci.Id,
+                Name = nci.Name,
+                Description = nci.Description,
+                LogoUrl = nci.LogoUrl
+            };
+        }
+
     }
 }

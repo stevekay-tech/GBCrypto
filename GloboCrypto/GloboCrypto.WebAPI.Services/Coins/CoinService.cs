@@ -28,24 +28,14 @@ namespace GloboCrypto.WebAPI.Services.Coins
         {
             string url = $"https://api.nomics.com/v1/currencies?key={NomicsAPIKey}&ids={coinId}&attributes=id,name,description,logo_url";
             var nomicsCoin = await HttpClient.GetFromJsonAsync<NomicsCoinInfo[]>(url);
-            if (nomicsCoin.Length > 0) { 
-                return new CoinInfo
-                {
-                    Id = nomicsCoin[0].Id,
-                    Name = nomicsCoin[0].Name,
-                    Description = nomicsCoin[0].Description,
-                    LogoUrl = nomicsCoin[0].LogoUrl
-                };
-            } 
-            else
-            {
-                return null;
-            }
+            return (nomicsCoin.Length > 0 ? (CoinInfo)nomicsCoin[0] : null);
         }
 
-        public Task<IEnumerable<CoinPriceInfo>> GetCoinPriceInfo(string coinIds)
+        public async Task<IEnumerable<CoinPriceInfo>> GetCoinPriceInfo(string coinIds, string currency, string intervals)
         {
-            throw new NotImplementedException();
+            string url = $"https://api.nomics.com/v1/currencies/ticker?key={NomicsAPIKey}&ids={coinIds}&interval={intervals}&convert={currency}";
+            var nomicsCoinPrices = await HttpClient.GetFromJsonAsync<NomicsCoinPriceInfo[]>(url);
+            return nomicsCoinPrices.Select(x => (CoinPriceInfo)x);
         }
     }
 }

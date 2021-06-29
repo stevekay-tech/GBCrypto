@@ -31,5 +31,17 @@ namespace GloboCrypto.WebAPI.Controllers
             else
                 return Ok(result);
         }
+
+        [HttpGet("prices/{coinIds}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<IEnumerable<CoinPriceInfo>>> GetPrices(string coinIds, string currency, string intervals)
+        {
+            var result = await CoinService.GetCoinPriceInfo(coinIds, currency, intervals);
+            if (result is null)
+                return NotFound();
+            else
+                return Ok(result);
+        }
     }
 }
