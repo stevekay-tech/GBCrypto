@@ -1,4 +1,4 @@
-﻿using GloboCrypto.Models.Interfaces;
+﻿using GloboCrypto.WebAPI.Services.Data;
 using GloboCrypto.WebAPI.Services.Models;
 using System;
 using System.Collections.Generic;

@@ -1,6 +1,7 @@
 using GloboCrypto.WebAPI.Services.Coins;
 using GloboCrypto.WebAPI.Services.Data;
 using GloboCrypto.WebAPI.Services.Events;
+using GloboCrypto.WebAPI.Services.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,6 +38,7 @@ namespace GloboCrypto.WebAPI
             });
 
             services.AddHttpClient();
+            services.AddSingleton<IHttpService, HttpService>();
             services.AddSingleton<ILocalDbService>(new LocalDbService("CoinAPIData.db"));
             services.AddSingleton<IEventService, EventService>();
             services.AddSingleton<ICoinService, CoinService>();
