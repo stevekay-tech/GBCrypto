@@ -4,9 +4,6 @@ using GloboCrypto.WebAPI.Services.Models;
 using Microsoft.Extensions.Configuration;
 using Moq;
 using NUnit.Framework;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace GloboCrypto.Tests
