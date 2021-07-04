@@ -1,32 +1,53 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using GloboCrypto.Models.Notifications;
 using GloboCrypto.WebAPI.Services.Data;
+using GloboCrypto.WebAPI.Services.Events;
 
 namespace GloboCrypto.WebAPI.Services.Notifications
 {
     public class NotificationService : INotificationService
     {
         private readonly ILocalDbService LocalDb;
+        private readonly IEventService EventService;
 
-        public NotificationService(ILocalDbService localDb)
+        public NotificationService(ILocalDbService localDb, IEventService eventService)
         {
             LocalDb = localDb;
+            EventService = eventService;
         }
 
-        public Task CheckAndNotifyAsync()
+        public async Task CheckAndNotifyAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<NotificationSubscription> SubscribeAsync(string userId, NotificationSubscription subscription)
+        public async Task<NotificationSubscription> SubscribeAsync(string userId, NotificationSubscription subscription)
         {
-            throw new NotImplementedException();
+            LocalDb.Delete<NotificationSubscription>(e => e.UserId == userId);
+
+            subscription.UserId = userId;
+            await Task.Run(() => LocalDb.Upsert(subscription));
+
+            await EventService.LogSubscription(userId);
+
+            return subscription;
         }
 
-        public Task UpdateSubscription(string userId, string coinIds)
+        public async Task UpdateSubscriptionAsync(string userId, string coinIds)
         {
-            throw new NotImplementedException();
+            await Task.Run(() =>
+            {
+                var subscription = LocalDb.Query<NotificationSubscription>(sub => sub.UserId == userId).FirstOrDefault();
+                if (subscription != null)
+                {
+                    var coins = coinIds?.Split(',').ToList();
+                    subscription.CoinIds = coins;
+                    LocalDb.Upsert(subscription);
+                    EventService.LogSubscriptionUpdate(userId);
+                }
+            });
         }
     }
 }

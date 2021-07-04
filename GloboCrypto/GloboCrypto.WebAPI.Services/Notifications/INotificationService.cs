@@ -8,6 +8,6 @@ namespace GloboCrypto.WebAPI.Services.Notifications
     {
         Task CheckAndNotifyAsync();
         Task<NotificationSubscription> SubscribeAsync(string userId, NotificationSubscription subscription);
-        Task UpdateSubscription(string userId, string coinIds);
+        Task UpdateSubscriptionAsync(string userId, string coinIds);
     }
 }
