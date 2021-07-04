@@ -2,6 +2,7 @@ using GloboCrypto.WebAPI.Services.Coins;
 using GloboCrypto.WebAPI.Services.Data;
 using GloboCrypto.WebAPI.Services.Events;
 using GloboCrypto.WebAPI.Services.Http;
+using GloboCrypto.WebAPI.Services.Notifications;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -42,6 +43,7 @@ namespace GloboCrypto.WebAPI
             services.AddSingleton<ILocalDbService>(new LocalDbService("CoinAPIData.db"));
             services.AddSingleton<IEventService, EventService>();
             services.AddSingleton<ICoinService, CoinService>();
+            services.AddSingleton<INotificationService, NotificationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
