@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.WebAPI", "GloboCrypto.WebAPI\GloboCrypto.WebAPI.csproj", "{502EC527-78A3-410A-A85E-6A1E9A83C784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboCrypto.WebAPI", "GloboCrypto.WebAPI\GloboCrypto.WebAPI.csproj", "{502EC527-78A3-410A-A85E-6A1E9A83C784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.Models", "GloboCrypto.Models\GloboCrypto.Models.csproj", "{7CA67173-C80A-444A-82FF-AD1CD6167F86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboCrypto.Models", "GloboCrypto.Models\GloboCrypto.Models.csproj", "{7CA67173-C80A-444A-82FF-AD1CD6167F86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.WebAPI.Services", "GloboCrypto.WebAPI.Services\GloboCrypto.WebAPI.Services.csproj", "{92A8C654-D2F9-4E62-8F29-E1830439C752}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboCrypto.WebAPI.Services", "GloboCrypto.WebAPI.Services\GloboCrypto.WebAPI.Services.csproj", "{92A8C654-D2F9-4E62-8F29-E1830439C752}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.Tests", "GloboCrypto.Tests\GloboCrypto.Tests.csproj", "{B0E57E65-8318-4DD1-9E73-7B6B99DADF3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboCrypto.Tests", "GloboCrypto.Tests\GloboCrypto.Tests.csproj", "{B0E57E65-8318-4DD1-9E73-7B6B99DADF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.PWA", "GloboCrypto.PWA\GloboCrypto.PWA.csproj", "{E4609576-6CC4-405B-8C91-DAF986E9F75C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B0E57E65-8318-4DD1-9E73-7B6B99DADF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0E57E65-8318-4DD1-9E73-7B6B99DADF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0E57E65-8318-4DD1-9E73-7B6B99DADF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4609576-6CC4-405B-8C91-DAF986E9F75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4609576-6CC4-405B-8C91-DAF986E9F75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4609576-6CC4-405B-8C91-DAF986E9F75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4609576-6CC4-405B-8C91-DAF986E9F75C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
