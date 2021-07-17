@@ -18,8 +18,11 @@ namespace GloboCrypto.PWA
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
 
-            builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            builder.Services.AddScoped<IAppSettings, AppSettings>();
+            //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddTransient<IAppSettings, AppSettings>();
+            builder.Services.AddTransient<IAppStorageService, AppStorageService>();
+            builder.Services.AddHttpClient("coinapi");
+            builder.Services.AddScoped<ICoinAPIService, CoinAPIService>();
             await builder.Build().RunAsync();
         }
     }

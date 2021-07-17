@@ -30,6 +30,24 @@ a, .btn-link {
     color: red;
 }
 
+/*Custom added classes*/
+img {
+    border-radius: 10%;
+}
+
+.coinmodal {
+    border-color: var(--font-color);
+    border-width: medium;
+    border-radius: 1rem;
+    margin: 1%;
+    width: 99%;
+}
+
+.coin-description {
+    white-space: pre-line;
+}
+/*Custom added classes*/
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
