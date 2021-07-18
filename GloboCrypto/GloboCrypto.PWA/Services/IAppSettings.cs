@@ -8,5 +8,6 @@
         string AuthToken { get; }
         string CacheInvalid { get; }
         string APIHost { get; }
+        string Local { get;}
     }
 }

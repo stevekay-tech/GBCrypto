@@ -53,6 +53,22 @@ namespace GloboCrypto.PWA.Services
         public async Task SaveCoinTrackerCacheAsync(CoinTrackerCache coinTrackerCache)
         {
             await StorageService.SetItemAsync(AppSettings.CoinCache, coinTrackerCache);
+            await StorageService.SetItemAsync(AppSettings.CacheInvalid, false);
+        }
+
+        public async Task<LocalSettings> GetLocalSettingsAsync()
+        {
+            return await StorageService.GetItemAsync<LocalSettings>(AppSettings.Local);
+        }
+
+        public async Task SaveLocalSettingsAsync(LocalSettings settings)
+        {
+            await StorageService.SetItemAsync(AppSettings.Local, settings);
+        }
+
+        public async Task<bool> IsCacheInvalidAsync()
+        {
+            return await StorageService.GetItemAsync<bool>(AppSettings.CacheInvalid);
         }
     }
 }

@@ -17,5 +17,6 @@ namespace GloboCrypto.PWA.Services
         public string AuthToken => Config["auth-token"];
         public string CacheInvalid => Config["cache-invalid"];
         public string APIHost => Config["api-host"];
+        public string Local => Config["app-settings"];
     }
 }

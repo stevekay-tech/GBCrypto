@@ -12,5 +12,8 @@ namespace GloboCrypto.PWA.Services
         Task SaveCoinListAsync(IEnumerable<CoinInfo> coinList);
         Task<CoinTrackerCache> GetCoinTrackerCacheAsync();
         Task SaveCoinTrackerCacheAsync(CoinTrackerCache coinTrackerCache);
+        Task<LocalSettings> GetLocalSettingsAsync();
+        Task SaveLocalSettingsAsync(LocalSettings settings);
+        Task<bool> IsCacheInvalidAsync();
     }
 }

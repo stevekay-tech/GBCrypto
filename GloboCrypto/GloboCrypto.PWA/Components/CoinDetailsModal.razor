@@ -58,9 +58,9 @@
         StateHasChanged();
     }
 
-    public async Task Show(long id)
+    public async Task Show(string id)
     {
-        coinId = id.ToString();
+        coinId = id;
         Coin = null;
         ShowDialog = true;
         Coin = (await CoinAPIService.GetCoinInfo(coinId));
