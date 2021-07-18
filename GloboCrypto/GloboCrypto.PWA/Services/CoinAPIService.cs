@@ -26,7 +26,7 @@ namespace GloboCrypto.PWA.Services
 
         public async Task<IEnumerable<CoinPriceInfo>> GetCoinPriceInfo(string coinIds, string currency="GBP", string intervals="1d")
         {
-            string url = $"{AppSettings.APIHost}/api/Coin/prices/{coinIds}?currency={currency}&intervals={intervals}";
+            string url = $"{AppSettings.APIHost}/api/Coin/prices/{coinIds}?currency={currency}";//&intervals={intervals}";
             return await HttpClient.GetFromJsonAsync<IEnumerable<CoinPriceInfo>>(url);
         }
     }

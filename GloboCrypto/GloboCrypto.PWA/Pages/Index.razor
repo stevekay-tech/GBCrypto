@@ -50,7 +50,7 @@ else
                 <tr @onclick="@(() => OpenDialog(@coinInfo.Id))">
                     <td width="88px"><img src="@coinInfo.LogoUrl" width=64px height=64px alt="image for @coinInfo.Name" /></td>
                     <td><h5>@coinInfo.Name</h5><span>@coinInfo.Id</span></td>
-                    <td width="88px"><h5>@coinPrice.Price.FormatPrice()</h5><span>@((MarkupString)TrendIndicator(coinInfo.Id)) @coinPrice.Intervals["1d"].PriceChangePct.FormatPct()%</span></td>
+                    <td width="88px"><h5>@coinPrice.Price.FormatPrice()</h5><span>@((MarkupString)TrendIndicator(coinInfo.Id)) @coinPrice.Intervals[localSettings.PriceChangeInterval].PriceChangePct.FormatPct()%</span></td>
                 </tr>
                 }
             </tbody>
@@ -101,7 +101,7 @@ else
             //if (localSettings.NotificationsEnabled)
             //    await CoinAPIService.UpdateGameSubscriptions(userId, gameIds);
             var coinList = string.Join(',', coins.Select(coin => coin.Id).ToArray());
-            coinPrices = (coins.Count > 0) ? await CoinAPIService.GetCoinPriceInfo(coinList) as List<CoinPriceInfo> : new List<CoinPriceInfo>();
+            coinPrices = (coins.Count > 0) ? await CoinAPIService.GetCoinPriceInfo(coinList, localSettings.Currency, localSettings.PriceChangeInterval) as List<CoinPriceInfo> : new List<CoinPriceInfo>();
             //  Set the cache of coins
             await AppStorageService.SaveCoinTrackerCacheAsync(new CoinTrackerCache
             {
@@ -136,7 +136,7 @@ else
         var id = await AppStorageService.GetIdAsync();
         //userId = $"RBLX-{id}";
 
-        localSettings = (await AppStorageService.GetLocalSettingsAsync()) ?? new LocalSettings { RefreshInterval = 30 };
+        localSettings = (await AppStorageService.GetLocalSettingsAsync()) ?? new LocalSettings { RefreshInterval = 30, Currency="GBP", PriceChangeInterval="1d" };
         var cacheInvalid = (await AppStorageService.IsCacheInvalidAsync());
 
         await UpdateCoinInfo(cacheInvalid);
@@ -157,7 +157,7 @@ else
         var priceInfo = coinPrices.FirstOrDefault(coin => coin.Id == coinId);
         if (priceInfo != null)
         {
-            var priceChange = float.Parse(priceInfo.Intervals["1d"].PriceChange);
+            var priceChange = float.Parse(priceInfo.Intervals[localSettings.PriceChangeInterval].PriceChange);
             return priceChange > 0 ? "<span class='oi oi-arrow-top' style='color: green'></span>" : "<span class='oi oi-arrow-bottom'  style='color: red'></span>";
         }
         else
