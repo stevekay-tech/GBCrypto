@@ -15,6 +15,10 @@
 </head>
 
 <body>
+    <div class="alert" id="update-alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <label><strong style="background-color: green; color: whitesmoke; padding: 4px;">Update!</strong> a new version is available - click to update.</label>
+    </div>
     <div id="app">Loading...</div>
 
     <div id="blazor-error-ui">
@@ -23,6 +27,20 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script language="javascript">
+        const bc = new BroadcastChannel('blazor-channel');
+        bc.onmessage = function (message) {
+            if (message && message.data === "new-version-found") {
+                let updateDiv = document.getElementById("update-alert");
+                updateDiv.addEventListener('click', () => {
+                    bc.postMessage("skip-waiting");
+                });
+                updateDiv.style.display = "block";
+            } else if (message && message.data === "reload-page") {
+                window.location.href = window.location.href;
+            }
+        }
+    </script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>
 

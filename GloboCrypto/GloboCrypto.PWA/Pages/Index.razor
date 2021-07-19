@@ -16,10 +16,15 @@
 
 <div id="header-block" style="height:60px; width:100%;">
     <button class="btn btn-action-settings btn-circle btn-lg" @onclick="NavigateToSettings" aria-label="Open Settings"><span class="oi oi-cog"></span></button>
-    <img src="icon-512.png" width="50" height="50" alt="Coin Updates Image" />
 </div>
 
 <div id="addbutton">
+    @if (localSettings != null)
+    {
+        <button class="btn btn-info btn-sm" disabled>@localSettings.Currency</button>
+        <button class="btn btn-info btn-sm" disabled>@localSettings.PriceChangeInterval</button>
+        <span>&nbsp;</span>
+    }
     <button class="btn btn-primary btn-circle btn-lg" @onclick="NavigateToSearch" aria-label="Navigate to Search"><span class="oi oi-magnifying-glass"></span></button>
 </div>
 <div id="refreshbutton">
