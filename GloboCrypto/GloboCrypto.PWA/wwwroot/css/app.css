@@ -36,7 +36,7 @@ a, .btn-link {
 
 .my-custom-scrollbar {
     position: relative;
-    height: calc(100% - 145px) !important;
+    height: calc(100% - 110px) !important;
     overflow: auto;
 }
 
@@ -172,7 +172,7 @@ img {
 
 .content {
     padding-top: 5px;
-    color: lightskyblue
+    color: slategray
 }
 
 .valid.modified:not([type=checkbox]) {

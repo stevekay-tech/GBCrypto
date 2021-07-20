@@ -124,6 +124,8 @@ else
                 coinPrices = coinCache.CoinPrices.ToList();
                 lastUpdate = coinCache.CacheTime.LocalDateTime.ToShortTimeString();
             }
+            else
+                coinPrices = new List<CoinPriceInfo>();
             Console.WriteLine("Data fetched from Cache");
         }
 
