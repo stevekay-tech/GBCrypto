@@ -67,11 +67,10 @@ else
     private List<CoinInfo> coins;
     private List<CoinPriceInfo> coinPrices;
     private Timer refreshTimer;
-    private string lastUpdate;
     private bool isRefreshing;
-    private LocalSettings localSettings;
-
+    private string lastUpdate;
     public CoinDetailsModal CoinDialog { get; set; }
+    private LocalSettings localSettings;
 
     protected async Task OpenDialog(string coinId)
     {
@@ -138,10 +137,10 @@ else
         await UpdateCoinInfo(true);
     }
 
+        //userId = $"RBLX-{id}";
     protected override async Task OnInitializedAsync()
     {
         var id = await AppStorageService.GetIdAsync();
-        //userId = $"RBLX-{id}";
 
         localSettings = (await AppStorageService.GetLocalSettingsAsync()) ?? new LocalSettings { RefreshInterval = 30, Currency="GBP", PriceChangeInterval="1d" };
         var cacheInvalid = (await AppStorageService.IsCacheInvalidAsync());

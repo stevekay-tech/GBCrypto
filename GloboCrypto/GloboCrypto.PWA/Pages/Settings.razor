@@ -153,9 +153,6 @@ else
         await SaveSettings();
     }
 
-    private async void OnToggleNotifications(bool val)
-    {
-        localSettings.NotificationsEnabled = val;
         //var id = await AppStorageService.GetIdAsync();
         //var userId = $"RBLX-{id}";
         //List<long> gameIds = new List<long>();
@@ -169,6 +166,9 @@ else
         //}
         //await CoinInfoService.UpdateGameSubscriptions(userId, gameIds);
         //_ = RequestNotificationSubscriptionAsync();
+    private async void OnToggleNotifications(bool val)
+    {
+        localSettings.NotificationsEnabled = val;
         await SaveSettings();
     }
 
@@ -181,8 +181,8 @@ else
     private async void OnToggleDarkMode(bool val)
     {
         localSettings.DarkModeEnabled = val;
-        //await JSRuntime.InvokeVoidAsync("MyInterop.ChangeTheme", val);
         await SaveSettings();
     }
+        //await JSRuntime.InvokeVoidAsync("MyInterop.ChangeTheme", val);
 
 }
