@@ -23,7 +23,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
-    - name: Clean
+    - name: Clean Enviornment
       run: dotnet clean "${{ env.WORKING_DIRECTORY }}" && dotnet nuget locals all --clear
     - name: Restore
       run: dotnet restore "${{ env.WORKING_DIRECTORY }}"
