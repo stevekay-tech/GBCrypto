@@ -1,5 +1,6 @@
 using GloboCrypto.WebAPI.Handlers;
 using GloboCrypto.WebAPI.Models;
+using GloboCrypto.WebAPI.Services.Authentication;
 using GloboCrypto.WebAPI.Services.Coins;
 using GloboCrypto.WebAPI.Services.Data;
 using GloboCrypto.WebAPI.Services.Events;
@@ -59,6 +60,7 @@ namespace GloboCrypto.WebAPI
             services.AddSingleton<IEventService, EventService>();
             services.AddSingleton<ICoinService, CoinService>();
             services.AddSingleton<INotificationService, NotificationService>();
+            services.AddSingleton<IAuthenticationService, AuthenticationService>();
 
             services.AddTransient<IAuthorizationHandler, ApiKeyRequirementHandler>();
             services.AddAuthorization(authConfig =>
