@@ -60,6 +60,7 @@ namespace GloboCrypto.WebAPI
             services.AddSingleton<IEventService, EventService>();
             services.AddSingleton<ICoinService, CoinService>();
             services.AddSingleton<INotificationService, NotificationService>();
+            services.AddSingleton<ITokenService, TokenService>();
             services.AddSingleton<IAuthenticationService, AuthenticationService>();
 
             services.AddTransient<IAuthorizationHandler, ApiKeyRequirementHandler>();
