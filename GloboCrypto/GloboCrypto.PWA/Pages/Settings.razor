@@ -190,9 +190,8 @@ else
                 {
                     await CoinAPIService.SubscribeToNotifications(subscription); //- send subscription to the API
                 }
-                catch (Exception ex) //(AccessTokenNotAvailableException ex)
+                catch (Exception ex)
                 {
-                    //ex.Redirect();
                 }
             }
         }
@@ -211,7 +210,9 @@ else
     private async void OnToggleDarkMode(bool val)
     {
         localSettings.DarkModeEnabled = val;
+        await JSRuntime.InvokeVoidAsync("DarkModeInterop.ChangeTheme", val);
         await SaveSettings();
+
     }
     //await JSRuntime.InvokeVoidAsync("MyInterop.ChangeTheme", val);
 
