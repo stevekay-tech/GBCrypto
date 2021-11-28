@@ -102,9 +102,11 @@ else
         coins = await AppStorageService.GetCoinListAsync() ?? new List<CoinInfo>();
         if (fromAPI)
         {
-            //if (localSettings.NotificationsEnabled)
-            //    await CoinAPIService.UpdateGameSubscriptions(userId, gameIds);
             var coinList = string.Join(',', coins.Select(coin => coin.Id).ToArray());
+
+            if (localSettings.NotificationsEnabled)
+                await CoinAPIService.UpdateSubscriptions(coinList);
+
             coinPrices = (coins.Count > 0) ? await CoinAPIService.GetCoinPriceInfo(coinList, localSettings.Currency, localSettings.PriceChangeInterval) as List<CoinPriceInfo> : new List<CoinPriceInfo>();
             //  Set the cache of coins
             await AppStorageService.SaveCoinTrackerCacheAsync(new CoinTrackerCache
@@ -137,7 +139,7 @@ else
         await UpdateCoinInfo(true);
     }
 
-        //userId = $"RBLX-{id}";
+    //userId = $"RBLX-{id}";
     protected override async Task OnInitializedAsync()
     {
         var id = await AppStorageService.GetIdAsync();
