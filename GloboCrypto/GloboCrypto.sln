@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboCrypto.Tests", "GloboC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboCrypto.PWA", "GloboCrypto.PWA\GloboCrypto.PWA.csproj", "{E4609576-6CC4-405B-8C91-DAF986E9F75C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboCrypto.CoinMonitor", "GloboCrypto.CoinMonitor\GloboCrypto.CoinMonitor.csproj", "{FD97BBC1-0468-4572-8D57-3D7FC5D9C675}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboCrypto.CoinMonitor", "GloboCrypto.CoinMonitor\GloboCrypto.CoinMonitor.csproj", "{FD97BBC1-0468-4572-8D57-3D7FC5D9C675}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
