@@ -11,4 +11,5 @@ namespace GloboCrypto.Models.Data
         public string Description { get; set; }
         public string LogoUrl { get; set; }
     }
+
 }
